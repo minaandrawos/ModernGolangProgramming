@@ -1,0 +1,18 @@
+/*
+type animal struct {
+	id         int
+	animalType string
+	nickname   string
+	zone       int
+	age        int
+}
+*/
+package dinoproto2;
+
+message animal{
+	required int32 id = 1;
+	required string animal_type = 2;
+	optional string nickname = 3;
+	required int32 zone = 4;
+	optional int32 age = 5;
+}

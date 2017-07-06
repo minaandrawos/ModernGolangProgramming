@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package dinogrpc;
+
+message animal{
+	int32 id = 1;
+	string animal_type = 2;
+	string nickname = 3;
+	int32 zone = 4;
+	int32 age = 5;
+}
+
+message request{
+	string nickname = 1;
+}
+
+service DinoService {
+    rpc GetAnimal(request) returns (animal);
+    rpc GetAllAnimals(request) returns (stream animal);
+}
+
+// [Client application] <============> [Server application] --> <Dino database>

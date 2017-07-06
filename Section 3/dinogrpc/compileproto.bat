@@ -1,0 +1,1 @@
+protoc dinogrpcdata.proto --go_out=plugins=grpc:.

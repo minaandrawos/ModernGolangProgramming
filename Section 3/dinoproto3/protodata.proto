@@ -1,0 +1,20 @@
+/*
+type animal struct {
+	id         int
+	animalType string
+	nickname   string
+	zone       int
+	age        int
+}
+*/
+syntax = "proto3";
+
+package dinoproto3;
+
+message animal{
+	int32 id = 1;
+	string animal_type = 2;
+	string nickname = 3;
+	int32 zone = 4;
+	int32 age = 5;
+}
